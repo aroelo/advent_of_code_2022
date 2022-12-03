@@ -13,3 +13,9 @@ func GetInputPath(fileName string, test bool) string {
 	}
 	return filepath.Join(inputDirPath, fileName)
 }
+
+func Check(e error) {
+	if e != nil {
+		panic(e)
+	}
+}

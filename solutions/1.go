@@ -9,19 +9,13 @@ import (
 	"strconv"
 )
 
-func check(e error) {
-	if e != nil {
-		panic(e)
-	}
-}
-
-func partOne() int {
+func partOne1() int {
 	mostCalories := 0
 	currentCalories := 0
 
 	filePath := pkg.GetInputPath("1.txt", false)
 	f, err := os.Open(filePath)
-	check(err)
+	pkg.Check(err)
 
 	scanner := bufio.NewScanner(f)
 	scanner.Split(bufio.ScanLines)
@@ -45,13 +39,13 @@ func partOne() int {
 	return mostCalories
 }
 
-func partTwo() int {
+func partTwo1() int {
 	var mostCalories [4]int
 	currentCalories := 0
 
 	filePath := pkg.GetInputPath("1.txt", false)
 	f, err := os.Open(filePath)
-	check(err)
+	pkg.Check(err)
 
 	scanner := bufio.NewScanner(f)
 	scanner.Split(bufio.ScanLines)
@@ -87,10 +81,10 @@ func partTwo() int {
 // https://adventofcode.com/2022/day/1
 func main() {
 	// 70116
-	mostCalories := partOne()
+	mostCalories := partOne1()
 	println(mostCalories)
 
 	// 206582
-	sumCalories := partTwo()
+	sumCalories := partTwo1()
 	println(sumCalories)
 }
