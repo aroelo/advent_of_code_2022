@@ -7,9 +7,9 @@ import (
 func GetInputPath(fileName string, test bool) string {
 	var inputDirPath string
 	if test == true {
-		inputDirPath = "/Users/aroelofs/GolandProjects/advent_of_code_2022/input_test"
+		inputDirPath = "/Users/Aniek/GolandProjects/advent_of_code_2022/input_test"
 	} else {
-		inputDirPath = "/Users/aroelofs/GolandProjects/advent_of_code_2022/input"
+		inputDirPath = "/Users/Aniek/GolandProjects/advent_of_code_2022/input"
 	}
 	return filepath.Join(inputDirPath, fileName)
 }
